@@ -20,6 +20,7 @@ All extensions require `Emacs 27.1` or higher.
 
 {% for package in site.data.packages %}
 - **Question**: {{ package.question }}
+  
   **Answer**: Try out `{{ package.package }}` extension.
 {% if package.note %}
   **Note**: {{ package.note }}
