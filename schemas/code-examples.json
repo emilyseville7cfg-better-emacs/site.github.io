@@ -51,6 +51,11 @@
     "uniqueItems": true,
     "items": {
         "description": "Code examples for the current site",
+        "type": "object",
+        "required": [
+            "original",
+            "translations"
+        ],
         "properties": {
             "original": {
                 "$ref": "#/definitions/code-example",
