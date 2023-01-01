@@ -24,7 +24,5 @@ All extensions require `Emacs 27.1` or higher.
   **Answer**: Try out [`{{ package.package }}`](https://github.com/emilyseville7cfg-better-emacs/{{ package.package }}) extension.
 {% if package.note %}
   **Note**: {{ package.note }}
-{% else %}
-  **Note**: `<package>.note is unpecified`
 {% endif %}
 {% endfor %}
