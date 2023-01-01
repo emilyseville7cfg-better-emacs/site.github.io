@@ -1,0 +1,9 @@
+- question: Want to have the ability to generate random numbers, lazy sequences, or lists?
+  package: random-generators
+  note: You just need to specify a random number range and sequence or list length and everything is done.
+- question: Want to have the ability to generate lazy sequences or lists by rules?
+  package: generators
+  note: You just need to specify a random number range and sequence or list length and everything is done.
+- question: Want to have the ability to check whether a number is (or not) in a specific range via pattern matching?
+  package: range-pattern
+  note: You just need to specify a number range and everything is done.

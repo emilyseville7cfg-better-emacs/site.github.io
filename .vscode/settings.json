@@ -1,5 +1,10 @@
 {
     "yaml.schemas": {
-        "schemas/code-examples.json": "_data/*.yml"
+        "schemas/code-examples.json": [
+            "_data/range-pattern.yml",
+            "_data/generators.yml",
+            "_data/random-generators.yml"
+        ],
+        "schemas/packages.json": "_data/packages.yml"
     }
 }

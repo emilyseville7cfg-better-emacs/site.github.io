@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "description": "Schema for all packages",
+    "type": "array",
+    "uniqueItems": true,
+    "items": {
+        "description": "Packages for the current site",
+        "type": "object",
+        "required": [
+            "package",
+            "question"
+        ],
+        "properties": {
+            "package": {
+                "description": "A package name for the current site",
+                "type": "string",
+                "minLength": 1
+            },
+            "question": {
+                "description": "A question to answer for the current site",
+                "type": "string",
+                "minLength": 1
+            },
+            "note": {
+                "description": "A note for the current site",
+                "type": "string",
+                "minLength": 1
+            }
+        },
+        "additionalProperties": false
+    },
+    "additionalProperties": false
+}
