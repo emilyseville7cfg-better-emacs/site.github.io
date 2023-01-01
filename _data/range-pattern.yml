@@ -1,0 +1,12 @@
+- original:
+    description: Check whether 20 in a [10..50] range via pattern matching
+    language: lisp
+    code: |
+      (pcase 20
+        ((in 10 50) "in range")
+        (_ "anything else"))
+  translations:
+    - description: inherit
+      language: python
+      code: |
+        "in range" if 20 in range(10, 51) else "anything else"

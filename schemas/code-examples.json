@@ -1,0 +1,72 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "definitions": {
+        "code-example": {
+            "title": "code example",
+            "description": "A code example for the current site",
+            "type": "object",
+            "required": [
+                "description",
+                "language",
+                "code"
+            ],
+            "properties": {
+                "description": {
+                    "description": "A code example description for the current site\nUse `inherit` keyword to inherit code description from the original one",
+                    "type": "string",
+                    "minLength": 1,
+                    "examples": [
+                        "inherit"
+                    ]
+                },
+                "language": {
+                    "description": "A code example language for the current site",
+                    "type": "string",
+                    "enum": [
+                        "lisp",
+                        "python",
+                        "csharp"
+                    ]
+                },
+                "code": {
+                    "description": "A code example for the current site",
+                    "type": "string",
+                    "minLength": 1
+                },
+                "imports": {
+                    "description": "A code example imports for the current site\nThey are used to import required libraries to check whether code examples are correct",
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                        "description": "A code example import for the current site\nIt is used to import required library to check whether code example is correct",
+                        "type": "string",
+                        "minLength": 1
+                    }
+                }
+            }
+        }
+    },
+    "description": "Schema for all code example configs",
+    "type": "array",
+    "uniqueItems": true,
+    "items": {
+        "description": "Code examples for the current site",
+        "properties": {
+            "original": {
+                "$ref": "#/definitions/code-example",
+                "additionalProperties": false
+            },
+            "translations": {
+                "description": "Code example translations for the current site",
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+                    "$ref": "#/definitions/code-example",
+                    "additionalProperties": false
+                }
+            }
+        },
+        "additionalProperties": false
+    },
+    "additionalProperties": false
+}

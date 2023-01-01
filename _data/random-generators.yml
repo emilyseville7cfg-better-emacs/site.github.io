@@ -1,0 +1,46 @@
+- original:
+    description: Generate a random number within [10..20] range
+    language: lisp
+    code: |
+      (random-generators-number 10 20)
+  translations:
+    - description: inherit
+      language: python
+      imports:
+        - random
+      code: |
+        random.randint(10, 20)
+- original:
+    description: Generate a sequence of 5 random numbers within [10..20] range
+    language: lisp
+    code: |
+      (iter-do (item (random-generators-sequence 5 10 20)) (message (format "item is %d" item)))
+  translations:
+    - description: inherit
+      language: python
+      code: |
+        for item in (random.randint(10, 20) for index in range(5)):
+          print(f"item is {item}")
+- original:
+    description: Generate a list of 5 random numbers within [10..20] range
+    language: lisp
+    code: |
+      (random-generators-list 5 10 20)
+  translations:
+    - description: inherit
+      language: python
+      code: |
+        [random.randint(10, 20) for index in range(5)]
+- original:
+    description: Generate a sequence of 5 randomly choosen numbers from a list
+    language: lisp
+    code: |
+      (iter-do (item (random-generators-sequence-from '(2 4 6 8) 5)) (message (format "item is %d" item)))
+  translations:
+    - description: inherit
+      language: python
+      imports:
+        - random
+      code: |
+        for item in random.sample([random.randint(10, 20) for index in range(5)], 5):
+          print(f"item is {item}")
