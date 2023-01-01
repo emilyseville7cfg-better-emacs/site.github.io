@@ -18,6 +18,8 @@
   translations:
     - description: inherit
       language: python
+      imports:
+        - random
       code: |
         for item in (random.randint(10, 20) for index in range(5)):
           print(f"item is {item}")
@@ -29,6 +31,8 @@
   translations:
     - description: inherit
       language: python
+      imports:
+        - random
       code: |
         [random.randint(10, 20) for index in range(5)]
 - original:
