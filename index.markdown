@@ -21,7 +21,7 @@ All extensions require `Emacs 27.1` or higher.
 {% for package in site.data.packages %}
 - **Question**: {{ package.question }}
   
-  **Answer**: Try out `{{ package.package }}` extension.
+  **Answer**: Try out [`{{ package.package }}`](https://github.com/emilyseville7cfg-better-emacs/{{ package.package }}) extension.
 {% if package.note %}
   **Note**: {{ package.note }}
 {% else %}
